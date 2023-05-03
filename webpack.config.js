@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -10,6 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "bundle.babylon.js",
+        clean: true
     },
     devtool: 'source-map',
     module: {
@@ -23,9 +25,13 @@ module.exports = {
     },
     devServer: {
         hot: true,
-        open: true
+        open: true,
+        devMiddleware: {
+            writeToDisk: true
+        }
     },
     plugins: [
-        new HtmlWebpackPlugin({template: "index.html"})
+        new HtmlWebpackPlugin({template: "index.html"}),
+        new CleanWebpackPlugin()
     ]
 }
