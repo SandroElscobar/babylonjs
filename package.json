@@ -12,6 +12,7 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
+    "@types/earcut": "^2.1.1",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.1",
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "@babylonjs/core": "^6.1.0",
-    "@babylonjs/materials": "^6.1.0"
+    "@babylonjs/materials": "^6.1.0",
+    "earcut": "^2.2.4"
   }
 }
